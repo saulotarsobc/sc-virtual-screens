@@ -3,14 +3,13 @@ import { join } from "path";
 import { format } from "url";
 
 // Packages
-import isDev from "electron-is-dev";
 import prepareNext from "electron-next";
-
-console.log(process.argv);
 
 // Modules
 import { BrowserWindow, app, ipcMain, IpcMainEvent, dialog } from "electron";
 import { getWinSettings, setWinSettings } from "./store";
+
+const isDev = process.argv.some((str) => str == "--dev");
 
 const createWindow = () => {
   const winSize = getWinSettings();

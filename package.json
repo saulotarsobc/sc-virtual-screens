@@ -12,8 +12,8 @@
     "url": "https://github.com/saulotarsobc/sc-virtual-screens"
   },
   "scripts": {
-    "dev": "npm run build-electron && npx electron .",
-    "start": "npm run build-electron && npx electron . --dev",
+    "dev": "npm run build-electron && npx electron . --dev",
+    "start": "npm run build-electron && npx electron .",
     "clear:install": "npx rimraf node_modules package-lock.json && npm install --force",
     "clean": "npx rimraf dist main frontend/out frontend/.next",
     "build-frontend": "npx next build frontend",
@@ -42,7 +42,6 @@
     "autoprefixer": "^10.4.16",
     "electron": "^28.1.4",
     "electron-builder": "^24.9.1",
-    "electron-is-dev": "^2.0.0",
     "next": "^14.0.4",
     "npm-check-updates": "^16.14.12",
     "postcss": "^8.4.33",
