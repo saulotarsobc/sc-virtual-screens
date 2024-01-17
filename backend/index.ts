@@ -10,6 +10,7 @@ import { BrowserWindow, app, ipcMain, IpcMainEvent, dialog } from "electron";
 import { getWinSettings, setWinSettings } from "./store";
 
 const isDev = process.argv.some((str) => str == "--dev");
+const isStart = process.argv.some((str) => str == "--start");
 
 const createWindow = () => {
   const winSize = getWinSettings();
@@ -37,7 +38,7 @@ const createWindow = () => {
   if (isDev) mainWindow.webContents.openDevTools();
 
   mainWindow.loadURL(
-    isDev
+    isStart || isDev
       ? `http://localhost:8000/`
       : format({
           pathname: join(__dirname, "../frontend/out/index.html"),

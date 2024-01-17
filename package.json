@@ -11,22 +11,26 @@
     "email": "saulotarsobc@gmail.com",
     "url": "https://github.com/saulotarsobc/sc-virtual-screens"
   },
+  "engines": {
+    "node": ">=18.0.0",
+    "yarn": ">=1.22.0"
+  },
   "scripts": {
-    "dev": "npm run build-electron && npx electron . --dev",
-    "start": "npm run build-electron && npx electron .",
-    "clear:install": "npx rimraf node_modules package-lock.json && npm install --force",
-    "clean": "npx rimraf dist main frontend/out frontend/.next",
-    "build-frontend": "npx next build frontend",
-    "build-electron": "npx tsc -p backend",
-    "build": "npm run clean && npm run build-frontend && npm run build-electron",
-    "pack-app": "npm run build-frontend && npm run build-electron && npm run build && npx electron-builder --dir",
-    "dist": "npm run build && npx electron-builder",
-    "type-check": "npx tsc -p ./frontend/tsconfig.json && npx tsc -p ./backend/tsconfig.json",
-    "publish": "npx electron-builder --win -p always",
-    "publish-linux": "npx electron-builder --linux -p always",
-    "postinstall": "npx electron-builder install-app-deps",
-    "release": "npx electron-builder",
-    "libs-update": "npx ncu -i"
+    "dev": "yarn build-backend && electron . --dev",
+    "start": "yarn build && electron . --start",
+    "clear:install": "rimraf node_modules package-lock.json && yarn cache clean && yarn install",
+    "clean": "rimraf dist main frontend/out frontend/.next",
+    "build-frontend": "next build frontend",
+    "build-backend": "tsc -p backend",
+    "build": "yarn clean && yarn build-frontend && yarn build-backend",
+    "pack-app": "yarn build-frontend && yarn build-backend && yarn build && electron-builder --dir",
+    "dist": "yarn build && electron-builder",
+    "type-check": "tsc -p ./frontend/tsconfig.json && tsc -p ./backend/tsconfig.json",
+    "publish": "electron-builder --win -p always",
+    "publish-linux": "electron-builder --linux -p always",
+    "postinstall": "electron-builder install-app-deps",
+    "release": "electron-builder",
+    "libs-update": "ncu -i"
   },
   "dependencies": {
     "electron-next": "^3.1.5",
