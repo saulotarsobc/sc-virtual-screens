@@ -1,0 +1,34 @@
+Inscreva-se no canal para ajudar <3 #Rumo100K
+redes sociais @odorizzioficial <3
+====================================================================================
+
+Instalação do monitor virtual
+
+====================================================================================
+Abrir CMD como Administrador: cd "colar a RAIZ da pasta"
+====================================================================================
+Comando 32bits(X86): deviceinstaller install usbmmidd.inf usbmmidd
+Comando 64bits: deviceinstaller64 install usbmmidd.inf usbmmidd
+====================================================================================
+
+
+Ativar Monitor Virtual:
+Comando 32bits(X86): deviceinstaller enableidd 1
+Comando 64bits: deviceinstaller64 enableidd 1
+====================================================================================
+
+
+Desativar Monitor Virtual:
+Comando 32bits(X86): deviceinstaller enableidd 0
+Comando 64bits: deviceinstaller64 enableidd 0
+====================================================================================
+
+
+Desinstalar:
+Comando 32bits(X86):deviceinstaller stop usbmmidd
+Comando 32bits(X86):deviceinstaller remove usbmmidd 
+====================================================================================
+Comando 64bits: deviceinstaller64 stop usbmmidd
+Comando 64bits: deviceinstaller64 remove usbmmidd
+====================================================================================
+
