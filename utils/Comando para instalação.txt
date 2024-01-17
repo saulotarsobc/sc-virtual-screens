@@ -26,7 +26,7 @@ Comando 64bits: deviceinstaller64 enableidd 0
 
 Desinstalar:
 Comando 32bits(X86):deviceinstaller stop usbmmidd
-Comando 32bits(X86):deviceinstaller remove usbmmidd 
+Comando 32bits(X86):deviceinstaller remove usbmmidd
 ====================================================================================
 Comando 64bits: deviceinstaller64 stop usbmmidd
 Comando 64bits: deviceinstaller64 remove usbmmidd

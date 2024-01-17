@@ -65,7 +65,14 @@
     "asar": true,
     "files": [
       "main",
-      "frontend/out"
+      "frontend/out",
+      "utils"
+    ],
+    "extraResources": [
+      {
+        "from": "utils",
+        "to": "utils"
+      }
     ]
   }
 }
