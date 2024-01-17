@@ -13,6 +13,7 @@
   },
   "scripts": {
     "dev": "npm run build-electron && npx electron .",
+    "start": "npm run build-electron && npx electron . --dev",
     "clear:install": "npx rimraf node_modules package-lock.json && npm install --force",
     "clean": "npx rimraf dist main frontend/out frontend/.next",
     "build-frontend": "npx next build frontend",

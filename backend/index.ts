@@ -6,6 +6,8 @@ import { format } from "url";
 import isDev from "electron-is-dev";
 import prepareNext from "electron-next";
 
+console.log(process.argv);
+
 // Modules
 import { BrowserWindow, app, ipcMain, IpcMainEvent, dialog } from "electron";
 import { getWinSettings, setWinSettings } from "./store";
