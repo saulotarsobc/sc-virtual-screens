@@ -70,6 +70,6 @@ ipcMain.on("chooseFiles", (event: IpcMainEvent) => {
 });
 
 ipcMain.on("createUser", (event: IpcMainEvent, data: {}) => {
-	console.log(data)
+  console.log(data);
   event.returnValue = "ok";
 });
