@@ -1,28 +1,61 @@
 import { useState } from "react";
 
 export default function Index() {
-  const [Users, setUsers] = useState([]);
+  const [data, setData] = useState("");
 
   return (
-    <main>
-      <h1>Home</h1>
-
+    <main className="flex flex-col p-1">
       <button
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-1"
         onClick={async () => {
-          const data = await global.api.db.createUser({
-            firstName: "Saulo",
-            lastName: "Costa",
-          });
-          setUsers(data);
+          const data = await global.api.runCommand(
+            "deviceinstaller64 install usbmmidd.inf usbmmidd"
+          );
+          setData(data);
         }}
       >
-        Criar user
+        Instalar app
       </button>
 
-      <hr />
-      <pre className="bg-slate-500">{JSON.stringify(Users, null, 4)}</pre>
-      <hr />
+      <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-1"
+        onClick={async () => {
+          const data = await global.api.runCommand(
+            "deviceinstaller64 stop usbmmidd; deviceinstaller64 remove usbmmidd"
+          );
+          setData(data);
+        }}
+      >
+        Remover app
+      </button>
+
+      <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-1"
+        onClick={async () => {
+          const data = await global.api.runCommand(
+            "deviceinstaller64 enableidd 1"
+          );
+          setData(data);
+        }}
+      >
+        Adicionar tela
+      </button>
+
+      <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-1"
+        onClick={async () => {
+          const data = await global.api.runCommand(
+            "deviceinstaller64 enableidd 0"
+          );
+          setData(data);
+        }}
+      >
+        Remover tela
+      </button>
+
+      <pre className="p-5 border border-red-100 rounded-md">
+        {JSON.stringify(data, null, 4)}
+      </pre>
     </main>
   );
 }

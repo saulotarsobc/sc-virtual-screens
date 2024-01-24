@@ -1,0 +1,28 @@
+==================================================================================
+
+Virtual Monitor
+
+install:
+====================================================================================
+command 32bits(X86): deviceinstaller install usbmmidd.inf usbmmidd
+command 64bits: deviceinstaller64 install usbmmidd.inf usbmmidd
+====================================================================================
+
+remove:
+command 32bits(X86):deviceinstaller stop usbmmidd
+command 32bits(X86):deviceinstaller remove usbmmidd
+====================================================================================
+command 64bits: deviceinstaller64 stop usbmmidd
+command 64bits: deviceinstaller64 remove usbmmidd
+====================================================================================
+
+enable:
+command 32bits(X86): deviceinstaller enableidd 1
+command 64bits: deviceinstaller64 enableidd 1
+====================================================================================
+
+disable:
+command 32bits(X86): deviceinstaller enableidd 0
+command 64bits: deviceinstaller64 enableidd 0
+====================================================================================
+

@@ -2,10 +2,7 @@ import Link from "next/link";
 import React from "react";
 
 export default function Header() {
-  const links = [
-    { content: "Home", href: "/" },
-    { content: "Página 2", href: "/page2" },
-  ];
+  const links = [{ content: "Home", href: "/" }];
 
   return (
     <header>

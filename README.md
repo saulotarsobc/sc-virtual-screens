@@ -1,12 +1,14 @@
 # SC - Virtual Screens
 
+![Alt text](images/image.png)
+
 ## Use
 
 ```sh
 git clone https://github.com/saulotarsobc/sc-virtual-screens.git;
 cd sc-virtual-screens;
 npm install;
-npm start;
+npm run dev;
 ```
 
 ### NPM Commands
