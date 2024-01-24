@@ -1,6 +1,6 @@
 {
   "name": "sc-virtual-screens",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "main/index.js",
   "icon": "build/icon.png",
   "description": "Create and manage virtual screens on Windows effortlessly",
