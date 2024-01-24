@@ -3,7 +3,7 @@ name: launch-app
 on:
   push:
     branches:
-      - master
+      - main
 
 env:
   GH_TOKEN: ${{ secrets.GH_TOKEN }}
