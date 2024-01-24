@@ -1,5 +1,7 @@
 # SC - Virtual Screens
 
+## Create and manage virtual screens on Windows effortlessly. This Electron application provides an intuitive interface for organizing your workspace. Easily switch between screens for a more efficient experience. Ideal for users seeking simplicity in managing virtual spaces.
+
 ![Alt text](images/image.png)
 
 ## Use

@@ -4,6 +4,7 @@
 {
     // geral
     "editor.formatOnSave": true,
+    "explorer.compactFolders": false,
     // material icon
     "material-icon-theme.activeIconPack": "nest",
     // comentarios
